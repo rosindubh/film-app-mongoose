@@ -2,21 +2,22 @@ const { Mongoose } = require("mongoose");
 const Film = require("./film.model");
 let readline = require("readline");
 let fs = require("fs");
+const { Console } = require("console");
+
 
 exports.movieInDb = async (check) => {
-    if (check == null) {
+    myCheck = check.name
+    if (myCheck === undefined) {
+        console.log(`\nNo film title after check...\n\nuse node src/app.js help for help\n`)
+        }
         try {
             const film = await Film.findOne({ name: check.name });
-            console.log(`${film.name} is in database`)
+            console.log(`${film.name} is in database`);
         } catch (error) {
-            console.log(`${check.name} is not in database`)
+            console.log(`${check.name} not in database`)
         }
     }
-    else {
-        console.log("no film after check")
-    }
 
-}
 exports.addMovie = async (newFilm) => {
     console.log("running...")
     try {
