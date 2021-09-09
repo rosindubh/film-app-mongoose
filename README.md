@@ -14,6 +14,9 @@
 ### To update the like status of a file: [node src/app.js update-like <"file title>" <"good" or "bad">]
 ### Example: node src/app.js update-like Bladerunner good
 
+### To update the year: [node src/app.js <"film title">] <"year">
+### Example: node src/app.js update-year Bladerunner 1982
+
 ### To delete a film: [node src/app.js delete <"film title">]
 ### node src/app.js update Bladerunne bad
 
