@@ -16,9 +16,9 @@ const app = async () => {
         await listMovies();
     }
     else if (command === "delete") {
- //       await movieInDb({
- //           name: process.argv[3],
- //       })
+       await movieInDb({
+           name: process.argv[3],
+        })
         await movieDelete({
             name: process.argv[3],
         })

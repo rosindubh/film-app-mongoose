@@ -58,7 +58,7 @@ exports.updateDate = async (updateObj) => {
 
 exports.badCommand = (badCommand) => {
     console.log(`\n\n${badCommand} is not a recognised command GET A GRIP!!!`);
-    console.log("Your options are\nadd\nlist\nupdate\ndelete\ncheck")
+    console.log("Your options are\nadd\nlist\nupdate-like\nupdate-year\ndelete\ncheck")
     
 }
 
