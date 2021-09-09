@@ -4,12 +4,18 @@ let readline = require("readline");
 let fs = require("fs");
 
 exports.movieInDb = async (check) => {
-    try {
-        const film = await Film.findOne({ name: check.name });
-        console.log(`${film.name} is in database`)
-    } catch (error) {
-        console.log(`${check.name} is not in database`)
+    if (check == null) {
+        try {
+            const film = await Film.findOne({ name: check.name });
+            console.log(`${film.name} is in database`)
+        } catch (error) {
+            console.log(`${check.name} is not in database`)
+        }
     }
+    else {
+        console.log("no film after check")
+    }
+
 }
 exports.addMovie = async (newFilm) => {
     console.log("running...")
