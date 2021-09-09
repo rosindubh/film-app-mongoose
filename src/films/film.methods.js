@@ -1,3 +1,4 @@
+const { Mongoose } = require("mongoose");
 const Film = require("./film.model");
 
 
@@ -34,12 +35,13 @@ exports.movieDelete = async (filter) => {
     }
 }
 
-exports.updateDb = async (filter) => {
-    await Film.findOneAndUpdate(filter)
+exports.updateDb = async (updateObj) => {
+    await Film.updateOne({name :updateObj.name}, {$set:{like: updateObj.like}});
 }
 
 exports.badCommand = (badCommand) => {
     console.log(`\n\n${badCommand} is not a recognised command GET A GRIP!!!`);
+    
 }
 
 
