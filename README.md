@@ -1,5 +1,8 @@
 # film-app-mongoose
 
+NOTE: This program requiers you run: npm install prompt
+      
+
 # Basic Syntax:
 ## NOTE: speech marks only necessary if string has spaces.
 

@@ -3,22 +3,34 @@ const Film = require("./film.model");
 let readline = require("readline");
 let fs = require("fs");
 const { Console } = require("console");
+const prompt = require("prompt");
 
+//function to clear screen
+const clearScreen = () => {
+const readline = require('readline')
+const blank = '\n'.repeat(process.stdout.rows)
+console.log(blank)
+readline.cursorTo(process.stdout, 0, 0)
+readline.clearScreenDown(process.stdout)
+}
 
 exports.movieInDb = async (check) => {
+    clearScreen()
     myCheck = check.name
     if (myCheck === undefined) {
-        console.log(`\nNo film title after check...\n\nuse node src/app.js help for help\n`)
+        console.log(`\nNo film title after check...\n\nuse:\n node src/app.js help\nfor help\n`)
         }
         try {
             const film = await Film.findOne({ name: check.name });
             console.log(`${film.name} is in database`);
         } catch (error) {
             console.log(`${check.name} not in database`)
-        }
+            
     }
+}
 
 exports.addMovie = async (newFilm) => {
+    clearScreen()
     console.log("running...")
     try {
         const movie = new Film(newFilm)
@@ -32,6 +44,7 @@ exports.addMovie = async (newFilm) => {
 };
 
 exports.listMovies = async () => {
+    clearScreen()
     try {
         const list = await Film.find({})
         console.log("running...")
@@ -43,6 +56,7 @@ exports.listMovies = async () => {
 }
 
 exports.movieDelete = async (filter) => {
+    clearScreen()
     try {
         console.log("running...")
         console.log(filter.name, "is being deleted")
@@ -66,7 +80,7 @@ exports.updateDate = async (updateObj) => {
 }
 
 exports.badCommand = (badCommand) => {
-    console.clear()
+    clearScreen()
     console.log(`\n\n${badCommand} is not a recognised command GET A GRIP!!!\n`);
     console.log("Your options are:\nadd\nlist\nupdate-like\nupdate-year\ndelete\ncheck\nhelp")
     console.log("\n\nFOR HELP ENTER THE COMMAND BELOW:\nnode src/app.js help\n")
@@ -74,11 +88,10 @@ exports.badCommand = (badCommand) => {
 }
 
 exports.help = () => {
-    console.clear();
+    clearScreen();
     let myInterface = readline.createInterface({
         input: fs.createReadStream('.//help.txt')
       });
-      
       let lineno = 0;
       myInterface.on('line', function (line) {
         lineno++;

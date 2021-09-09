@@ -15,6 +15,9 @@ const filmSchema = mongoose.Schema({
     },
     year: {
         type: String,
+    },
+    prompt: {
+        type: String,
     }
 });
 

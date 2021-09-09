@@ -6,6 +6,9 @@
 
  ### Commands run from root folder of project:
 
+ NOTE: NOTE: This program requiers you run: npm install prompt
+
+
  To add a film: [node src/app.js add <"film title"> <"actors name"> <"good" or "bad">]
  Example:  node src/app.js add Bladerunner "Harrison Ford" good
 
