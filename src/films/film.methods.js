@@ -1,5 +1,7 @@
 const { Mongoose } = require("mongoose");
 const Film = require("./film.model");
+let readline = require("readline");
+let fs = require("fs");
 
 exports.movieInDb = async (check) => {
     try {
@@ -57,11 +59,27 @@ exports.updateDate = async (updateObj) => {
 }
 
 exports.badCommand = (badCommand) => {
-    console.log(`\n\n${badCommand} is not a recognised command GET A GRIP!!!`);
-    console.log("Your options are\nadd\nlist\nupdate-like\nupdate-year\ndelete\ncheck")
+    console.clear()
+    console.log(`\n\n${badCommand} is not a recognised command GET A GRIP!!!\n`);
+    console.log("Your options are:\nadd\nlist\nupdate-like\nupdate-year\ndelete\ncheck\nhelp")
+    console.log("\n\nFOR HELP ENTER THE COMMAND BELOW:\nnode src/app.js help\n")
     
 }
 
+exports.help = () => {
+    console.clear();
+    // let readline = require("readline");
+    // let fs = require("fs");
+    let myInterface = readline.createInterface({
+        input: fs.createReadStream('.//help.txt')
+      });
+      
+      let lineno = 0;
+      myInterface.on('line', function (line) {
+        lineno++;
+        console.log(line);
+      });
+}
 
 
 // https://mongoosejs.com/docs/api.html

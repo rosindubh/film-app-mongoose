@@ -1,6 +1,6 @@
 require("./db/connection");
 const mongoose = require("mongoose");
-const {addMovie, listMovies, movieDelete, badCommand, updateDb, movieInDb, updateDate} = require("./films/film.methods");
+const {addMovie, listMovies, movieDelete, badCommand, updateDb, movieInDb, updateDate, help} = require("./films/film.methods");
 const command = process.argv[2];
 
 const app = async () => {
@@ -42,6 +42,11 @@ const app = async () => {
             name: process.argv[3]
         });
     }
+
+    else if(command === "help") {
+        await help()
+    }
+
     else {
         badCommand(command);
         mongoose.disconnect();
