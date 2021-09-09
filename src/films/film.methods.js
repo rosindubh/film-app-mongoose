@@ -51,6 +51,11 @@ exports.updateDb = async (updateObj) => {
     console.log(`${updateObj.name} updated to ${updateObj.like}`)
 }
 
+exports.updateDate = async (updateObj) => {
+    await Film.updateOne({name :updateObj.name}, {$set:{year: updateObj.year}});
+        console.log(`${updateObj.name} updated to ${updateObj.year}`)
+}
+
 exports.badCommand = (badCommand) => {
     console.log(`\n\n${badCommand} is not a recognised command GET A GRIP!!!`);
     console.log("Your options are\nadd\nlist\nupdate\ndelete\ncheck")
