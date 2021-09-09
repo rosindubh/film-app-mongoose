@@ -52,7 +52,7 @@ exports.updateDb = async (updateObj) => {
 
 exports.badCommand = (badCommand) => {
     console.log(`\n\n${badCommand} is not a recognised command GET A GRIP!!!`);
-    console.log("Your options are\nadd\nlist\nupdate\ndelete")
+    console.log("Your options are\nadd\nlist\nupdate\ndelete\ncheck")
     
 }
 
