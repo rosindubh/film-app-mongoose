@@ -9,3 +9,14 @@ exports.addMovie = async (newFilm) => {
         console.log(error)
     }
 };
+
+exports.listMovies = async () => {
+    try {
+        const list = await Film.find({})
+        console.log("running...")
+        console.log(list)
+        console.log("closing connection...")
+    } catch (error) {
+        
+    }
+}
