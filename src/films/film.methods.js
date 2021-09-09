@@ -7,7 +7,6 @@ exports.movieInDb = async (check) => {
         console.log(`${film.name} is in database`)
     } catch (error) {
         console.log(`${check.name} is not in database`)
-        
     }
 }
 exports.addMovie = async (newFilm) => {
