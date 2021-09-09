@@ -50,12 +50,12 @@ exports.movieDelete = async (filter) => {
 
 exports.updateDb = async (updateObj) => {
     await Film.updateOne({name :updateObj.name}, {$set:{like: updateObj.like}});
-    console.log(`${updateObj.name} updated to ${updateObj.like}`)
+    console.log(`${updateObj.name} like updated to ${updateObj.like}`)
 }
 
 exports.updateDate = async (updateObj) => {
     await Film.updateOne({name :updateObj.name}, {$set:{year: updateObj.year}});
-        console.log(`${updateObj.name} updated to ${updateObj.year}`)
+        console.log(`${updateObj.name} year updated to ${updateObj.year}`)
 }
 
 exports.badCommand = (badCommand) => {
@@ -68,8 +68,6 @@ exports.badCommand = (badCommand) => {
 
 exports.help = () => {
     console.clear();
-    // let readline = require("readline");
-    // let fs = require("fs");
     let myInterface = readline.createInterface({
         input: fs.createReadStream('.//help.txt')
       });
