@@ -20,6 +20,7 @@ exports.listMovies = async () => {
         console.log(list)
         console.log("closing connection...")
     } catch (error) {
+        console.log(`Error in listMovies ${error}`)
     }
 }
 
@@ -41,6 +42,7 @@ exports.updateDb = async (updateObj) => {
 
 exports.badCommand = (badCommand) => {
     console.log(`\n\n${badCommand} is not a recognised command GET A GRIP!!!`);
+    console.log("Your options are\nadd\nlist\nupdate\ndelete")
     
 }
 
