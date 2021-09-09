@@ -18,3 +18,13 @@ const filmSchema = mongoose.Schema({
 const Film = mongoose.model("Film", filmSchema);
 
 module.exports = Film;
+
+
+
+//.
+//├── app.js
+//├── db
+//│   └── connection.js
+//└── films
+//    ├── film.methods.js
+//    └── film.model.js

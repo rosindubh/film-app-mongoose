@@ -12,3 +12,11 @@ const connection = async () => {
 }
 
 connection();
+
+//.
+//├── app.js
+//├── db
+//│   └── connection.js
+//└── films
+//    ├── film.methods.js
+//    └── film.model.js
