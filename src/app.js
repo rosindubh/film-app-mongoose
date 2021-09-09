@@ -9,15 +9,16 @@ const app = async () => {
             name: process.argv[3],
             actor: process.argv[4],
             like: process.argv[5],
+            year: process.argv[6],
         });
     }
     else if (command === "list") {
         await listMovies();
     }
     else if (command === "delete") {
-        await movieInDb({
-            name: process.argv[3],
-        })
+ //       await movieInDb({
+ //           name: process.argv[3],
+ //       })
         await movieDelete({
             name: process.argv[3],
         })

@@ -13,6 +13,9 @@ const filmSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    year: {
+        type: String,
+    }
 });
 
 const Film = mongoose.model("Film", filmSchema);
