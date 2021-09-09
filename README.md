@@ -15,6 +15,7 @@
 ### Example: node src/app.js update Bladerunner good
 
 ### To delete a film: [node src/app.js delete <"film title">]
+### node src/app.js update Bladerunne bad
 
 ### To check if a film is in the database: [src/app.js check <"film title">]
 ### Example: node src/app.js check Bladerunner

@@ -18,6 +18,8 @@ exports.addMovie = async (newFilm) => {
         console.log("closing connection...")
     } catch (error) {
         console.log(`\n\nError occured...\n ${error}`)
+        console.log("\n\nMost likely this film aready in database... Please check!");
+        console.log("If film not in database, please contact developer.")
     }
 };
 
