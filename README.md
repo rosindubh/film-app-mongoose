@@ -1,6 +1,7 @@
 # film-app-mongoose
 
 # Basic Syntax:
+## NOTE: speech marks only necessary if string has spaces.
 
 ### from root folder of project:
 
@@ -14,3 +15,6 @@
 ### Example: node src/app.js update Bladerunner good
 
 ### To delete a film: [node src/app.js delete <"film title">]
+
+### To check if a film is in the database: [src/app.js check <"film title">]
+### Example: node src/app.js check Bladerunner
