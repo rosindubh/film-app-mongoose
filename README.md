@@ -1,7 +1,5 @@
 # film-app-mongoose
 
-### NOTE: This program may require you run: npm install prompt - TRY FIRST!!!
-
 ### your options are:
 ### add
 ### list

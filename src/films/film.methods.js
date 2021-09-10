@@ -2,8 +2,6 @@ const { Mongoose } = require("mongoose");
 const Film = require("./film.model");
 let readline = require("readline");
 let fs = require("fs");
-const { Console } = require("console");
-const prompt = require("prompt");
 
 
 exports.movieInDb = async (check) => {
