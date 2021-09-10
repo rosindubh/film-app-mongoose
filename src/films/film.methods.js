@@ -62,19 +62,29 @@ exports.movieDelete = async (filter) => {
 }
 
 exports.updateDb = async (updateObj) => {
+    console.clear();
     await Film.updateOne({name :updateObj.name}, {$set:{like: updateObj.like}});
     console.log(`${updateObj.name} like updated to ${updateObj.like}`)
 }
 
 exports.updateDate = async (updateObj) => {
+    console.clear();
     await Film.updateOne({name :updateObj.name}, {$set:{year: updateObj.year}});
         console.log(`${updateObj.name} year updated to ${updateObj.year}`)
 }
 
+exports.updateActor = async (updateObj) => {
+    console.clear();
+    await Film.updateOne({name :updateObj.name}, {$set:{actor: updateObj.actor}});
+        console.log(`${updateObj.name} actor updated to ${updateObj.actor}`)
+}
+
+
+
 exports.badCommand = (badCommand) => {
     console.clear();
     console.log(`\n\n${badCommand} is not a recognised command GET A GRIP!!!\n`);
-    console.log("Your options are:\nadd\nlist\nupdate-like\nupdate-year\ndelete\ncheck\nhelp")
+    console.log("Your options are:\nadd\nlist\nupdate-like\nupdate-year\nupdate-actor\ndelete\ncheck\nhelp")
     console.log("\n\nFOR HELP ENTER THE COMMAND BELOW:\nnode src/app.js help\n")
     
 }
