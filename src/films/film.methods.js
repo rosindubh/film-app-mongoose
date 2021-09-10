@@ -125,6 +125,17 @@ exports.showFilmMethods = () => {
       });
 }
 
+exports.showFilmModel = () => {
+    console.clear();
+    let myInterface = readline.createInterface({
+        input: fs.createReadStream('.//src/films/film.model.js')
+      });
+      let lineno = 0;
+      myInterface.on('line',  function (line) {
+        lineno++;
+        console.log(lineno, line);
+      });
+}
 
 // https://mongoosejs.com/docs/api.html
 
