@@ -37,6 +37,7 @@
  help
  show-app
  show-film-methods
+ show-film-model
 
                          (C) Phil Welsby 2021
 

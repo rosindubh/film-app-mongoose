@@ -67,7 +67,7 @@ const app = async () => {
     }
 
     else if(command == 'show-film-model') {
-        await showFilmModel({
+        showFilmModel({
             name: process.argv[3],
         })
     }

@@ -1,7 +1,19 @@
 # film-app-mongoose
 
-NOTE: This program requiers you run: npm install prompt
-      
+### NOTE: This program may require you run: npm install prompt - TRY FIRST!!!
+
+### your options are:
+### add
+### list
+### update-like
+### update-year
+### update-actor
+### delete
+### check
+### help
+### show-app
+### show-film-methods
+### show-film-model      
 
 # Basic Syntax:
 ## NOTE: speech marks only necessary if string has spaces.

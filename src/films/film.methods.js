@@ -84,7 +84,7 @@ exports.updateActor = async (updateObj) => {
 exports.badCommand = (badCommand) => {
     console.clear();
     console.log(`\n\n${badCommand} is not a recognised command GET A GRIP!!!\n`);
-    console.log("Your options are:\nadd\nlist\nupdate-like\nupdate-year\nupdate-actor\ndelete\ncheck\nhelp\nshow-app\nshow-film-methods")
+    console.log("Your options are:\nadd\nlist\nupdate-like\nupdate-year\nupdate-actor\ndelete\ncheck\nhelp\nshow-app\nshow-film-methods\nshow-film-model")
     console.log("\n\nFOR HELP ENTER THE COMMAND BELOW:\nnode src/app.js help\n")
     
 }
