@@ -35,7 +35,8 @@
  delete
  check
  help
-
+ show-app
+ show-film-methods
 
                          (C) Phil Welsby 2021
 

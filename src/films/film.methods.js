@@ -84,7 +84,7 @@ exports.updateActor = async (updateObj) => {
 exports.badCommand = (badCommand) => {
     console.clear();
     console.log(`\n\n${badCommand} is not a recognised command GET A GRIP!!!\n`);
-    console.log("Your options are:\nadd\nlist\nupdate-like\nupdate-year\nupdate-actor\ndelete\ncheck\nhelp")
+    console.log("Your options are:\nadd\nlist\nupdate-like\nupdate-year\nupdate-actor\ndelete\ncheck\nhelp\nshow-app\nshow-film-methods")
     console.log("\n\nFOR HELP ENTER THE COMMAND BELOW:\nnode src/app.js help\n")
     
 }
@@ -98,6 +98,30 @@ exports.help = () => {
       myInterface.on('line', function (line) {
         lineno++;
         console.log(line);
+      });
+}
+
+exports.showApp = () => {
+    console.clear();
+    let myInterface = readline.createInterface({
+        input: fs.createReadStream('.//src/app.js')
+      });
+      let lineno = 0;
+      myInterface.on('line',  function (line) {
+        lineno++;
+        console.log(lineno, line);
+      });
+}
+
+exports.showFilmMethods = () => {
+    console.clear();
+    let myInterface = readline.createInterface({
+        input: fs.createReadStream('.//src/films/film.methods.js')
+      });
+      let lineno = 0;
+      myInterface.on('line',  function (line) {
+        lineno++;
+        console.log(lineno, line);
       });
 }
 
