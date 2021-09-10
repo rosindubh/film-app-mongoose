@@ -7,7 +7,7 @@ const prompt = require("prompt");
 
 
 exports.movieInDb = async (check) => {
-    clearScreen()
+    console.clear();
     myCheck = check.name
     if (myCheck === undefined) {
         console.log(`\nNo film title after check...\n\nuse:\n node src/app.js help\nfor help\n`)
