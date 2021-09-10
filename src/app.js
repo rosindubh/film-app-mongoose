@@ -51,17 +51,17 @@ const app = async () => {
     }
 
     else if(command === "help") {
-        await help()
+        help()
     }
 
     else if(command ==="show-app") {
-        await showApp({
+        showApp({
             name: process.argv[3],
         })
     }
 
     else if(command === 'show-film-methods') {
-        await showFilmMethods({
+        showFilmMethods({
             name: process.argv[3],
         })
     }
