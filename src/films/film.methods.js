@@ -5,14 +5,6 @@ let fs = require("fs");
 const { Console } = require("console");
 const prompt = require("prompt");
 
-//function to clear screen
-const clearScreen = () => {
-const readline = require('readline')
-const blank = '\n'.repeat(process.stdout.rows)
-console.log(blank)
-readline.cursorTo(process.stdout, 0, 0)
-readline.clearScreenDown(process.stdout)
-}
 
 exports.movieInDb = async (check) => {
     clearScreen()
@@ -30,7 +22,7 @@ exports.movieInDb = async (check) => {
 }
 
 exports.addMovie = async (newFilm) => {
-    clearScreen()
+    console.clear();
     console.log("running...")
     try {
         const movie = new Film(newFilm)
@@ -44,7 +36,7 @@ exports.addMovie = async (newFilm) => {
 };
 
 exports.listMovies = async () => {
-    clearScreen()
+    console.clear();
     try {
         const list = await Film.find({})
         console.log("running...")
@@ -56,7 +48,7 @@ exports.listMovies = async () => {
 }
 
 exports.movieDelete = async (filter) => {
-    clearScreen()
+    console.clear();
     try {
         console.log("running...")
         console.log(filter.name, "is being deleted")
@@ -80,7 +72,7 @@ exports.updateDate = async (updateObj) => {
 }
 
 exports.badCommand = (badCommand) => {
-    clearScreen()
+    console.clear();
     console.log(`\n\n${badCommand} is not a recognised command GET A GRIP!!!\n`);
     console.log("Your options are:\nadd\nlist\nupdate-like\nupdate-year\ndelete\ncheck\nhelp")
     console.log("\n\nFOR HELP ENTER THE COMMAND BELOW:\nnode src/app.js help\n")
@@ -88,7 +80,7 @@ exports.badCommand = (badCommand) => {
 }
 
 exports.help = () => {
-    clearScreen();
+    console.clear();
     let myInterface = readline.createInterface({
         input: fs.createReadStream('.//help.txt')
       });
