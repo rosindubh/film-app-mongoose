@@ -38,6 +38,7 @@
  show-app
  show-film-methods
  show-film-model
+ show-connection
 
                          (C) Phil Welsby 2021
 
