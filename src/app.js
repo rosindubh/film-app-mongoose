@@ -1,6 +1,6 @@
 require("./db/connection");
 const mongoose = require("mongoose");
-const {addMovie, listMovies, movieDelete, badCommand, updateDb, movieInDb, updateDate, updateActor, help, showApp, showFilmMethods, showFilmModel} = require("./films/film.methods");
+const {addMovie, listMovies, movieDelete, badCommand, updateDb, movieInDb, updateDate, updateActor, help, showApp, showFilmMethods, showFilmModel, showConnection} = require("./films/film.methods");
 const command = process.argv[2];
 
 const app = async () => {
@@ -68,6 +68,12 @@ const app = async () => {
 
     else if(command == 'show-film-model') {
         showFilmModel({
+            name: process.argv[3],
+        })
+    }
+
+    else if(command === "show-connection") {
+        showConnection({
             name: process.argv[3],
         })
     }
