@@ -55,7 +55,7 @@ exports.movieDelete = async (filter) => {
         console.log("closing connection...")
     } catch (error) {
         console.log(error);
-        
+
     }
 }
 
